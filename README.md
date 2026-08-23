@@ -36,14 +36,14 @@ if n=4 then nxnMatrix(4) should be
 *   *   *   *
 </pre>
 
-    ### leftAlignTriangle ###
+    <b>### leftAlignTriangle ###</b>
     for triangle of 1 to n and if n=4
     1
     1 2
     1 2 3
     1 2 3 4
 
-    ### leftAlignRowNumTriangle ###
+    <b>### leftAlignRowNumTriangle ###</b>
     for triangle to print as number of row where n=4
     1
     2 2
@@ -58,14 +58,17 @@ if n=4 then nxnMatrix(4) should be
         console.log(row);
     }
 
-    ### leftAlign_Inversion_ColNumTriangle ###
+    <b>### leftAlign_Inversion_ColNumTriangle ###</b>
         1 2 3 4 5
         1 2 3 4
         1 2 3
         1 2
         1
 
-<pre>rightAlignStarTriangle where n = 4
+
+    <b>### rightAlignStarTriangle ###</b>
+
+<pre> where n = 4
             *
         *   *
     *   *   *
@@ -82,14 +85,32 @@ pos of  i   |num of stars=>(i+1)|pos of * wrt j => no.of blanks = n-(i-1)
 <pre>
 <code>
 for(let i=0; i<n ; i++){
-    let row = " ";
-    for(let j=0; j<n-(i-1) ;j++){ // to add spaces/blanks
+    let row = "";
+    for(let j=0; j<n-(i+1) ;j++){ // to add spaces/blanks
         row = row + " ";
     }
     for(let k=0; k<i+1; k++){ // to add *s and k<i+1 and not k<=i+1 cz when i = 0, k should print only one *
-        row = row + " *";
+        row = row + "*";
     }
     console.log(row);
 }
 
 </code></pre>
+
+<b>### binaryTriangle_startWith_1 ###</b>
+here we restart every new row with 1, so we add the toggle=1 inside i loop
+1
+10
+101
+1010
+10101
+
+<b>### binaryTriangle_startWith_binaryContinuation ###</b>
+here we start each row in continuation of the binary digit of the last row and the first row starts with 1.
+so we add the toggle=1 outside the i loop as it should only run once that is at the initialisation of the row and never reset.
+1
+01
+010
+1010
+10101
+010101
