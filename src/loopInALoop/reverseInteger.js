@@ -7,7 +7,7 @@ var reverse = function (x) {
     x = Math.floor(x / 10);
   }
   rev = xCopy < 0 ? -rev : rev;
-  const limit = Math.pow(2, 31);
+  const limit = Math.pow(2, 31); // Math.pow(2,31) is same as 2**31
   return rev < -limit || rev > limit ? 0 : rev;
 };
 reverse(-123); //-321
