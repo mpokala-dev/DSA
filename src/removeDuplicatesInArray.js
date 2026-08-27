@@ -1,3 +1,4 @@
+/**Leet Code 26 */
 function removeDuplicates(arr) {
   /**
    * write a function to identify unique integers of the given sorted non-decreasing array
